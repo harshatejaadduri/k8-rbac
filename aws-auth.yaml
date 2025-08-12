@@ -6,10 +6,13 @@ data:
       - system:bootstrappers
       - system:nodes
       username: system:node:{{EC2PrivateDNSName}}
+  mapUsers: |
+    - groups:
+      - roboshop-trainee
+      userarn: arn:aws:iam::513993748676:user/Teja
+      username: Teja
+     
 kind: ConfigMap
 metadata:
-  creationTimestamp: "2025-08-12T12:13:12Z"
   name: aws-auth
   namespace: kube-system
-  resourceVersion: "1597"
-  uid: 7a10cbd5-c5f8-467e-b50a-e22a177ac190
